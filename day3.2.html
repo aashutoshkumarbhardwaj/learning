@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+    // function getAnimalData(){
+    //     // alert("Fetching animal data...");
+    //     //  const response = 
+    //    fetch("https://api.thecatapi.com/v1/breeds")
+    //    .then(function(response) {
+    //       response.json()
+    //       .then(function(finaldata){
+    //         console.log(finaldata);
+    //       })
+    //     })
+    // }
+// both do the same thing but the first one is more readable and easier to understand
+   async function getUserData(){
+        // alert("Fetching animal data...");
+        //  const response = 
+    //    const response= await fetch("https://api.thecatapi.com/v1/breeds" ,{
+    //    headers : {
+    //     "Authorization" : localStorage.read("token")
+
+    //    }
+    // });
+       const finalData= await  response.json()
+          
+            // console.log(finaldata);
+            document.getElementById("userData").innerHTML =JSON.stringify(finalData)
+       
+    }
+    // getAnimalData(); 
+</script>    
+
+</body>
+<div id="userData"></div>
+<button onclick ="getUserData()">Get user data</button>
+
+</html>
